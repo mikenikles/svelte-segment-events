@@ -4,7 +4,7 @@
  * @see https://segment.com/docs/connections/spec/track/#properties
  */
 export type Position = 'sidebar';
-export type Context = 'overwritten-below' | 'submenu';
+export type Context = 'overwritten-below' | 'submenu-1' | 'submenu-2';
 
 /*
  * 2. Define the individual properties objects.
