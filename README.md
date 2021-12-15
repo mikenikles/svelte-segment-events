@@ -5,14 +5,15 @@ This is a [Svelte](https://svelte.dev/) wrapper for the Segment.com Analytics.js
 **Table of contents**
 
 <!-- Generated with https://ecotrust-canada.github.io/markdown-toc/ -->
+
 - [Installation](#installation)
 - [Initialisation](#initialisation)
 - [Tracking methods](#tracking-methods)
-  * [Identify](#identify)
-  * [Track](#track)
-  * [Page](#page)
-  * [Group](#group)
-  * [Alias](#alias)
+  - [Identify](#identify)
+  - [Track](#track)
+  - [Page](#page)
+  - [Group](#group)
+  - [Alias](#alias)
 - [Contributing](#contributing)
 - [Release](#release)
 
@@ -30,7 +31,7 @@ In your Svelte file, or in `src/routes/__layout.svelte` if you use [SvelteKit](h
 
 ```html
 <script>
-  import { SegmentInit } from 'svelte-segment-events';
+	import { SegmentInit } from 'svelte-segment-events';
 </script>
 
 <SegmentInit writeKey="YOUR_WRITE_KEY" />
@@ -52,15 +53,14 @@ In your Svelte component, import the `trackEvent` function:
 
 ```html
 <script>
-  import { trackEvent } from 'svelte-segment-events';
+	import { trackEvent } from 'svelte-segment-events';
 </script>
 ```
 
 To track a button click event:
 
 ```html
-<button	use:trackEvent="{{ event: 'User Registered' }}">Register</button>
-
+<button use:trackEvent="{{ event: 'User Registered' }}">Register</button>
 ```
 
 ### Page
