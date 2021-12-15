@@ -12,7 +12,8 @@ const config = {
 		adapter: adapter(),
 
 		package: {
-			exports: (file) => file === 'index.ts'
+			exports: (file) => file === 'index.ts',
+			files: (filepath) => !filepath.startsWith('demos')
 		},
 
 		// hydrate the <div id="svelte"> element in src/app.html

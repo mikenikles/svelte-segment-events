@@ -1,2 +1,2 @@
-export { default as trackEvent } from './actions/track-event';
+export { default as track } from './actions/track';
 export { default as SegmentInit } from './init.svelte';

@@ -11,3 +11,9 @@
 <SegmentInit writeKey="QrH21WFKWA1dSrgGtoUk82q5cMxyJoiV" />
 
 <slot />
+
+<footer>
+	{#if $page.path !== '/'}
+		<a href="/">Home</a>
+	{/if}
+</footer>

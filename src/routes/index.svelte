@@ -1,14 +1,22 @@
 <script lang="ts">
-	import { trackEvent } from 'svelte-segment-events';
+	import Button from '$lib/demos/components/button.svelte';
 </script>
 
-<h1>Welcome to SvelteKit</h1>
-<p>Visit <a href="https://kit.svelte.dev">kit.svelte.dev</a> to read the documentation</p>
+<h1>Welcome to <code>svelte-segment-events</code></h1>
 
-<button
-	use:trackEvent={{
-		event: 'click'
-	}}>Track button</button
->
+<p><strong>Demos</strong></p>
+<ul>
+	<li>
+		Track
+		<ul>
+			<li><a href="/demos/track-basic">Basic</a></li>
+			<li><a href="/demos/track-with-data-analytics-attributes">With <code>data-analytics</code> attributes</a></li>
+		</ul>
+	</li>
+</ul>
+
+
+
+<Button>Default Track button</Button>
 
 <p>Navigate to the <a href="/about">/about</a> page.</p>
