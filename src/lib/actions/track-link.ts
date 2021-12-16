@@ -12,11 +12,21 @@ export default (
 	node: HTMLAnchorElement,
 	{ event, properties = {} }: ActionParameters
 ): { destroy: () => void } => {
-  const analyticsData = retrieveAnalyticsDataFromDOM(node);
-  const allProperties = { ...analyticsData, ...properties };
-  window.analytics?.trackLink(node, event, allProperties);
+	const track = () => {
+		const analyticsData = retrieveAnalyticsDataFromDOM(node);
+		const allProperties = { ...analyticsData, ...properties };
+		window.analytics?.trackLink(node, event, allProperties);
+	};
+
+	if (window.analytics) {
+		track();
+	} else {
+		window.addEventListener("segment-loaded", track);
+	}
 
 	return {
-		destroy() {}
+		destroy() {
+			window.removeEventListener("segment-loaded", track);
+		}
 	};
 };
