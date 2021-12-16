@@ -7,7 +7,7 @@ declare global {
 }
 
 declare namespace svelte.JSX {
-  interface HTMLProps<Window> {
-    segmentready?: EventHandler<Event, Window> | undefined;
+  interface SvelteWindowProps {
+    onsegmentready?: EventHandler<Event, Window> | undefined;
   }
 }
