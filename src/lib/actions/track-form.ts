@@ -21,12 +21,12 @@ export default (
 	if (window.analytics) {
 		track();
 	} else {
-		window.addEventListener("segment-loaded", track);
+		window.addEventListener("segmentready", track);
 	}
 
 	return {
 		destroy() {
-			window.removeEventListener("segment-loaded", track);
+			window.removeEventListener("segmentready", track);
 		}
 	};
 };

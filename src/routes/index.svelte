@@ -2,6 +2,8 @@
 	import Button from '$lib/demos/components/button.svelte';
 </script>
 
+<svelte:window on:segmentready={() => console.log("Segment is ready.")}/>
+
 <h1>Welcome to <code>svelte-segment-events</code></h1>
 
 <p><strong>Demos</strong></p>

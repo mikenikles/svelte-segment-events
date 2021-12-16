@@ -63,7 +63,11 @@
 						t.async = !0;
 						t.src = 'https://cdn.segment.com/analytics.js/v1/' + key + '/analytics.min.js';
 						// NOTE: This is custom and required to make actions like `track-form` and `track-link` work
-						t.onload = () => {window.dispatchEvent(new Event("segment-loaded"))};
+						t.onload = () => {
+							window.analytics.ready(() => {
+								window.dispatchEvent(new Event("segmentready"))
+							})
+						};
 						var n = document.getElementsByTagName('script')[0];
 						n.parentNode.insertBefore(t, n);
 						/* @ts-ignore */
