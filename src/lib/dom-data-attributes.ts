@@ -2,10 +2,10 @@
  * Walks upwards through the DOM, starting at `node`, and merges all `data-analytics` element attributes.
  * Attributes defined closer to the `node` take precendences.
  *
- * @param node HTMLButtonElement|HTMLAnchorElement The button for which this action is applied to.
+ * @param node HTMLButtonElement|HTMLAnchorElement|HTMLFormElement The button for which this action is applied to.
  * @returns Object An object with all combined `data-analytics` element attributes of all `node` ancestors.
  */
-export const retrieveAnalyticsDataFromDOM = (node: HTMLButtonElement | HTMLAnchorElement) => {
+export const retrieveAnalyticsDataFromDOM = (node: HTMLButtonElement | HTMLAnchorElement | HTMLFormElement) => {
 	let tmpNode = node.closest('[data-analytics]') as HTMLElement;
 	let analyticsData = {};
 	while (tmpNode) {

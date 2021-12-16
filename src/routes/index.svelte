@@ -20,6 +20,12 @@
 			<li><a href="/demos/track-link-with-data-analytics-attributes">With <code>data-analytics</code> attributes</a></li>
 		</ul>
 	</li>
+	<li>
+		Track Form
+		<ul>
+			<li><a href="/demos/track-form-basic">Basic</a></li>
+		</ul>
+	</li>
 </ul>
 
 

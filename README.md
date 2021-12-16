@@ -49,18 +49,54 @@ TBD
 
 See the [Segment Track docs](https://segment.com/docs/connections/sources/catalog/libraries/website/javascript/#track) for usage details.
 
-In your Svelte component, import the `trackEvent` function:
+**Button**
+
+In your Svelte component, import the `track` function:
 
 ```html
 <script>
-	import { trackEvent } from 'svelte-segment-events';
+	import { track } from 'svelte-segment-events';
 </script>
 ```
 
 To track a button click event:
 
 ```html
-<button use:trackEvent="{{ event: 'User Registered' }}">Register</button>
+<button use:track="{{ event: 'User Registered' }}">Register</button>
+```
+
+**Link**
+
+In your Svelte component, import the `trackLink` function:
+
+```html
+<script>
+	import { trackLink } from 'svelte-segment-events';
+</script>
+```
+
+To track a link:
+
+```html
+<a href="/about" use:track="{{ event: 'Navigated to About' }}">About</a>
+```
+
+**Form**
+
+In your Svelte component, import the `trackForm` function:
+
+```html
+<script>
+	import { trackForm } from 'svelte-segment-events';
+</script>
+```
+
+To track a form:
+
+```html
+<form action="/api/user" method="post">
+	<input name="email" type=""/>
+</form>
 ```
 
 ### Page
