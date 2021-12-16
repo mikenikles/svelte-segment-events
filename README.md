@@ -37,6 +37,14 @@ In your Svelte file, or in `src/routes/__layout.svelte` if you use [SvelteKit](h
 <SegmentInit writeKey="YOUR_WRITE_KEY" />
 ```
 
+A `segmentready` event is fired once the Segment analytics script is ready (see the [docs](https://segment.com/docs/connections/sources/catalog/libraries/website/javascript/#ready) for more on what "ready" means).
+
+You can listen for this event in your component with:
+
+```html
+<svelte:window on:segmentready={handler}/>
+```
+
 ## Tracking methods
 
 ### Identify
