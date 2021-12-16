@@ -51,7 +51,20 @@ You can listen for this event in your component with:
 
 See the [Segment Identify docs](https://segment.com/docs/connections/sources/catalog/libraries/website/javascript/#identify) for usage details.
 
-TBD
+In your Svelte file, or in `src/routes/__layout.svelte` if you use [SvelteKit](https://kit.svelte.dev/), add the following:
+
+```html
+<script lang="ts">
+	const identifyUser = () => {
+		window.analytics.identify("9f75de01-9e1f-452c-9d50-edc19a7f0316", {
+			name: "Mike Nikles",
+			twitter: "@mikenikles"
+		});
+	};
+</script>
+
+<svelte:window on:segmentready={identifyUser}/>
+```
 
 ### Track
 
